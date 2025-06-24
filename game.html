@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="score score-top-left">
+      Score: <span id="score">0</span>
+      <span style="margin-left: 20px;">Moves: <span id="moves">0</span></span>
+      <span style="margin-left: 20px;">Time: <span id="timer">0s</span></span>
+    </div>
+    <div class="logo">
+      <i class="fas fa-star"></i>
+      <span>Memory Card Game</span>
+      <i class="fas fa-clone"></i>
+    </div>
+    <div class="settings">
+      <i class="fas fa-cog"></i>
+      <div class="settings-card">
+        <div class="settings-header">
+          <h3>Settings</h3>
+          <i class="fas fa-times close-settings"></i>
+        </div>
+        <div class="settings-content">
+          <div class="volume-control">
+            <div class="volume-header">
+              <i class="fas fa-music"></i>
+              <span>Music Volume</span>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="volume-slider">
+          </div>
+          <div class="settings-actions">
+            <button id="restart-game" class="settings-btn">Restart</button>
+            <button id="quit-game" class="settings-btn">Quit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="game-container">
+      <div class="card-grid"></div>
+    </div>
+    <div id="rules-modal" class="rules-modal" style="display:flex;">
+      <div class="rules-modal-content">
+        <h2>Rules</h2>
+        <ul>
+          <li>1) Select two cards</li>
+          <li>2) If the cards are the same, you will get a point</li>
+          <li>3) If the cards are not the same, the cards will flip back—so remember the cards you pick</li>
+          <li>4) Continue until you find a pair for each card</li>
+        </ul>
+        <button id="rules-ok-btn">Okay</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html> 
